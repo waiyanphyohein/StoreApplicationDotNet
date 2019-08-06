@@ -1,0 +1,61 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Project1.App.Models.CustomerViewModel>;
+
+@{
+    ViewData["Title"] = "Customer";
+}
+
+<h1> Customer </h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+@using (Html.BeginForm("Index","Customer",FormMethod.Get)) {
+    @Html.TextBox("Searching")<input type ="submit" value = "Search"/>
+ }
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.X)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Y)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+{
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.X)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Y)
+                </td>
+                <td>
+                    <a asp-action="Detail" asp-route-id="@item.ID">Detail</a>
+                </td>
+            </tr>
+}
+    </tbody>
+</table>
