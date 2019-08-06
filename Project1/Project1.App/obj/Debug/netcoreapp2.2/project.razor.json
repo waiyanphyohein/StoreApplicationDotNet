@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/waiyanphyohein/Projects/Project1/Project1.App/Project1.App.csproj",
+  "FilePath": "/Users/waiyanphyohein/Projects/StoreRepo/Project1/Project1.App/Project1.App.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2948,6 +2948,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views/Location/Detail.cshtml",
+      "TargetPath": "Views/Location/Detail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views/Location/Select.cshtml",
       "TargetPath": "Views/Location/Select.cshtml",
       "FileKind": "mvc"
@@ -2965,6 +2970,11 @@
     {
       "FilePath": "Views/Shared/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views/Shared/_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Location/IndexOrder.cshtml",
+      "TargetPath": "Views/Location/IndexOrder.cshtml",
       "FileKind": "mvc"
     },
     {
