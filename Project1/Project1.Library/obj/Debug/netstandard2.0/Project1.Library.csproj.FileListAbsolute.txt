@@ -1,9 +1,0 @@
-/Users/waiyanphyohein/Projects/Project1/Project1.Library/bin/Debug/netstandard2.0/Project1.Library.deps.json
-/Users/waiyanphyohein/Projects/Project1/Project1.Library/bin/Debug/netstandard2.0/Project1.Library.dll
-/Users/waiyanphyohein/Projects/Project1/Project1.Library/bin/Debug/netstandard2.0/Project1.Library.pdb
-/Users/waiyanphyohein/Projects/Project1/Project1.Library/obj/Debug/netstandard2.0/Project1.Library.csprojAssemblyReference.cache
-/Users/waiyanphyohein/Projects/Project1/Project1.Library/obj/Debug/netstandard2.0/Project1.Library.csproj.CoreCompileInputs.cache
-/Users/waiyanphyohein/Projects/Project1/Project1.Library/obj/Debug/netstandard2.0/Project1.Library.AssemblyInfoInputs.cache
-/Users/waiyanphyohein/Projects/Project1/Project1.Library/obj/Debug/netstandard2.0/Project1.Library.AssemblyInfo.cs
-/Users/waiyanphyohein/Projects/Project1/Project1.Library/obj/Debug/netstandard2.0/Project1.Library.dll
-/Users/waiyanphyohein/Projects/Project1/Project1.Library/obj/Debug/netstandard2.0/Project1.Library.pdb
