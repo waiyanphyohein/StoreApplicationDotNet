@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Project1.App.Models.InventoryViewModel>;
+
+@{
+    ViewData["Title"] = "Place Order";
+}
+
+<h1>Place Order</h1>
+
+<div>
+    <h4>Inventory</h4>
+    <hr />
+    @using (Html.BeginForm("PlaceOrder", "Location"))
+    {
+    @foreach (var item in Model)
+    {
+        <dl class="col">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => item.ProductName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => item.ProductName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => item.Price)
+            </dt>
+            <dd class="col-sm-10">
+                $ @Html.DisplayFor(model => item.Price)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => item.RestrictedAmount)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => item.RestrictedAmount)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => item.AvailableUnits)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => item.AvailableUnits)
+            </dd>
+        </dl>
+        <label>
+            Amount:
+           
+            <input type ="hidden" asp-for="@item.ProductID" name ="ProductID" value= "@item.ProductID"/>
+            <input type ="hidden" asp-for="@item.Price" name ="Price" value="@item.Price"/>
+            <input type="number" asp-for = "@item.SelectAmount" data-val="true" name="SelectAmount" max=@(item.RestrictedAmount>item.AvailableUnits ? item.AvailableUnits : item.RestrictedAmount) min="0" />
+        </label>
+            
+    <hr />
+    } @*End of Foreach loop*@
+    
+        <input type ="submit" class="btn btn-primary float-right" value="Place Order"/>
+        <input type="hidden" name="LocationID" value="@TempData["LocationID"]" />
+        <input type="hidden" name="CustomerID" value="@TempData["CustomerID"]" />
+    }
+</div>
+<div>
+    @using (Html.BeginForm("Index", "Location"))
+    {
+        <input type="submit" class="btn btn-outline-primary" value="Back to Location"/>
+        <input type="hidden" name="LocationID" value="@TempData["LocationID"]" />
+        <input type="hidden" name="CustomerID" value="@TempData["CustomerID"]" />
+    }
+        
+</div>
